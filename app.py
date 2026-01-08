@@ -166,18 +166,58 @@ pressures = {"A": pA, "B": pB, "C": pC, "D": pD}
 st.subheader("Data Logging")
 col_save, col_view = st.columns(2)
 
+# Track last saved record in session state
+if "last_saved_index" not in st.session_state:
+    st.session_state["last_saved_index"] = None
+
+# --- SAVE PRESSURES BUTTON ---
 with col_save:
     if st.button("💾 Save Pressures", use_container_width=True):
-        save_pressures(jacket_id, case, pressures)
-        st.success("Pressures saved successfully.")
+        # Save pressures first
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        new_row = {
+            "Jacket ID": jacket_id,
+            "Case": case,
+            "DateTime": now,
+            "BP (A)": pressures["A"],
+            "BQ (B)": pressures["B"],
+            "AQ (C)": pressures["C"],
+            "AP (D)": pressures["D"],
+            "Comment": ""  # initially empty
+        }
 
+        if os.path.exists(REGISTER_FILE):
+            df = pd.read_csv(REGISTER_FILE)
+            df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+        else:
+            df = pd.DataFrame([new_row])
+
+        df.to_csv(REGISTER_FILE, index=False)
+        st.session_state["last_saved_index"] = len(df) - 1  # store index for comment
+        st.success("Pressures saved successfully!")
+
+# --- COMMENT INPUT FOR LAST SAVED RECORD ---
+if st.session_state.get("last_saved_index") is not None:
+    df = pd.read_csv(REGISTER_FILE)
+    idx = st.session_state["last_saved_index"]
+    comment = st.text_input(
+        "Add a comment for this record:",
+        value=df.at[idx, "Comment"]
+    )
+    if st.button("💬 Save Comment"):
+        df.at[idx, "Comment"] = comment
+        df.to_csv(REGISTER_FILE, index=False)
+        st.success("Comment saved!")
+
+# --- VIEW REGISTER BUTTON ---
 with col_view:
     if st.button("📋 Register", use_container_width=True):
         st.session_state["show_register"] = True
 
+# --- DISPLAY REGISTER ---
 if st.session_state.get("show_register", False):
     st.subheader("Pressure Register")
-    df = load_register()
+    df = pd.read_csv(REGISTER_FILE)
     if df.empty:
         st.info("No records available.")
     else:
