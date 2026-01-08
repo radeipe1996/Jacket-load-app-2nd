@@ -92,26 +92,22 @@ LEG_LABELS = {
 # ----------------------------
 # FUNCTIONS
 # ----------------------------
-# ----------------------------
-# FUNCTIONS
-# ----------------------------
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
 
 def save_pressures(jacket_id, case, pressures):
-    # Define UTC+2 timezone
-    utc_plus_2 = timezone(timedelta(hours=2))
-    # Format date as dd/mm/yy HH:MM:SS
-    now = datetime.now(utc_plus_2).strftime("%d/%m/%y %H:%M:%S")
+    # Get current UTC time and add 2 hours for UTC+2
+    now_utc2 = datetime.utcnow() + timedelta(hours=2)
+    now_str = now_utc2.strftime("%d/%m/%y %H:%M:%S")  # dd/mm/yy HH:MM:SS
     
     new_row = {
         "Jacket ID": jacket_id,
         "Case": case,
-        "DateTime": now,
+        "DateTime": now_str,
         "BP (A)": pressures["A"],
         "BQ (B)": pressures["B"],
         "AQ (C)": pressures["C"],
         "AP (D)": pressures["D"],
-        "Comment": ""  # keep comment column
+        "Comment": ""
     }
     
     if os.path.exists(REGISTER_FILE):
@@ -120,7 +116,7 @@ def save_pressures(jacket_id, case, pressures):
     else:
         df = pd.DataFrame([new_row])
     df.to_csv(REGISTER_FILE, index=False)
-    return len(df) - 1  # return index of last saved record
+    return len(df) - 1
 
 def load_register():
     if os.path.exists(REGISTER_FILE):
