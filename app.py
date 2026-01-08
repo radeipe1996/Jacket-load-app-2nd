@@ -21,8 +21,65 @@ JACKETS = {
     "G05": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
     "H05": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
     "J05": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.9,"D":16.9}},
+    "J04": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "K04": {"EAC":{"A":11.6,"B":11.5,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "L04": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":22.8,"D":17.4}},
+    "M04": {"EAC":{"A":11.6,"B":11.2,"C":22.9,"D":12.6}, "OBS":{"A":17.4,"B":19.6,"C":22.9,"D":17.4}},
+    "L05": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":22.8,"D":17.4}},
+    "M05": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.4,"B":19.6,"C":22.8,"D":17.4}},
+    "L06": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":22.8,"D":17.4}},
+    "M06": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.4,"B":19.6,"C":22.8,"D":17.4}},
+    "L07": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "M07": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.4,"B":19.6,"C":22.8,"D":17.4}},
+    "F05": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.4}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "D05": {"EAC":{"A":11.9,"B":11.4,"C":22.3,"D":12.3}, "OBS":{"A":17.8,"B":20.1,"C":22.3,"D":17.0}},
+    "E05": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.4}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "E04": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.4}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "G04": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.4}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "K07": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "J07": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "H07": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "G07": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "F07": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "E07": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
     "D07 (Radar)": {"EAC":{"A":11.8,"B":11.6,"C":22.6,"D":12.1}, "OBS":{"A":17.6,"B":20.4,"C":22.6,"D":16.6}},
-    # 👉 Keep full list here (unchanged from your original)
+    "D06": {"EAC":{"A":12.0,"B":11.4,"C":22.2,"D":12.3}, "OBS":{"A":17.9,"B":20.1,"C":22.2,"D":16.9}},
+    "E06": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "F06": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "G06": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "H06": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "J06": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "K06": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "K05": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "L03": {"EAC":{"A":11.6,"B":11.2,"C":22.9,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":22.9,"D":17.4}},
+    "M03": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.4,"B":19.6,"C":22.8,"D":17.4}},
+    "L02": {"EAC":{"A":11.6,"B":11.2,"C":22.9,"D":12.7}, "OBS":{"A":17.2,"B":19.6,"C":22.9,"D":17.5}},
+    "M01": {"EAC":{"A":11.6,"B":11.2,"C":23.0,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":23.0,"D":17.4}},
+    "M02": {"EAC":{"A":11.6,"B":11.1,"C":22.9,"D":12.7}, "OBS":{"A":17.3,"B":19.6,"C":22.9,"D":17.5}},
+    "K01": {"EAC":{"A":12.0,"B":11.4,"C":22.2,"D":12.3}, "OBS":{"A":17.9,"B":20.1,"C":22.2,"D":16.9}},
+    "L01": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":22.8,"D":17.4}},
+    "J01": {"EAC":{"A":11.6,"B":10.8,"C":22.9,"D":13.1}, "OBS":{"A":17.3,"B":19.0,"C":22.9,"D":18.0}},
+    "A02": {"EAC":{"A":11.6,"B":11.1,"C":22.9,"D":12.7}, "OBS":{"A":17.3,"B":19.6,"C":22.9,"D":17.5}},
+    "A03": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "A04": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "H04": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "H01": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":22.8,"D":17.4}},
+    "H02": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "G02": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "D04": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "E03": {"EAC":{"A":11.6,"B":11.2,"C":22.8,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":22.8,"D":17.4}},
+    "C04": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "B04": {"EAC":{"A":11.6,"B":11.4,"C":22.8,"D":12.3}, "OBS":{"A":17.4,"B":20.1,"C":22.8,"D":16.9}},
+    "B02": {"EAC":{"A":11.6,"B":11.2,"C":23.0,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":23.0,"D":17.4}},
+    "B03": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "C02": {"EAC":{"A":11.6,"B":11.2,"C":23.0,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":23.0,"D":17.4}},
+    "C03": {"EAC":{"A":11.6,"B":11.2,"C":22.9,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":22.9,"D":17.4}},
+    "E02": {"EAC":{"A":11.6,"B":11.2,"C":23.0,"D":12.6}, "OBS":{"A":17.3,"B":19.6,"C":23.0,"D":17.4}},
+    "D03": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "F02": {"EAC":{"A":11.9,"B":11.4,"C":22.4,"D":12.3}, "OBS":{"A":17.8,"B":20.1,"C":22.4,"D":16.9}},
+    "E01": {"EAC":{"A":11.9,"B":11.4,"C":22.4,"D":12.3}, "OBS":{"A":17.8,"B":20.1,"C":22.4,"D":16.9}},
+    "F01": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
+    "G01": {"EAC":{"A":11.6,"B":11.4,"C":22.9,"D":12.3}, "OBS":{"A":17.3,"B":20.1,"C":22.9,"D":17.0}},
 }
 
 LEG_LABELS = {
@@ -37,7 +94,6 @@ LEG_LABELS = {
 # ----------------------------
 def save_pressures(jacket_id, case, pressures):
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
     new_row = {
         "Jacket ID": jacket_id,
         "Case": case,
@@ -47,21 +103,17 @@ def save_pressures(jacket_id, case, pressures):
         "AQ (C)": pressures["C"],
         "AP (D)": pressures["D"],
     }
-
     if os.path.exists(REGISTER_FILE):
         df = pd.read_csv(REGISTER_FILE)
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
     else:
         df = pd.DataFrame([new_row])
-
     df.to_csv(REGISTER_FILE, index=False)
-
 
 def load_register():
     if os.path.exists(REGISTER_FILE):
         return pd.read_csv(REGISTER_FILE)
     return pd.DataFrame()
-
 
 def leg_box(label, value, minimum):
     color = "#2ecc71" if value >= minimum else "#e74c3c"
@@ -83,24 +135,21 @@ def leg_box(label, value, minimum):
 # ----------------------------
 # HEADER
 # ----------------------------
-st.title("🦺 Jacket Load Distribution")
+st.title("⚖️ Jacket Load Distribution")
 st.caption("Real-time load monitoring during offshore installation")
 
 # ----------------------------
 # SELECTION
 # ----------------------------
 st.subheader("Jacket & Case")
-
 jacket_id = st.selectbox("Jacket ID", list(JACKETS.keys()))
 case = st.radio("Case", ["EAC", "OBS"], horizontal=True)
-
 min_targets = JACKETS[jacket_id][case]
 
 # ----------------------------
 # PRESSURE INPUTS
 # ----------------------------
 st.subheader("Pressure Input (bar)")
-
 col1, col2 = st.columns(2)
 with col1:
     pA = st.number_input("BP (A)", min_value=0.0, step=0.1)
@@ -110,11 +159,34 @@ with col2:
     pD = st.number_input("AP (D)", min_value=0.0, step=0.1)
 
 pressures = {"A": pA, "B": pB, "C": pC, "D": pD}
-total_pressure = sum(pressures.values())
+
+# ----------------------------
+# DATA LOGGING (IMMEDIATELY BELOW INPUT)
+# ----------------------------
+st.subheader("Data Logging")
+col_save, col_view = st.columns(2)
+
+with col_save:
+    if st.button("💾 Save Pressures", use_container_width=True):
+        save_pressures(jacket_id, case, pressures)
+        st.success("Pressures saved successfully.")
+
+with col_view:
+    if st.button("📋 Register", use_container_width=True):
+        st.session_state["show_register"] = True
+
+if st.session_state.get("show_register", False):
+    st.subheader("Pressure Register")
+    df = load_register()
+    if df.empty:
+        st.info("No records available.")
+    else:
+        st.dataframe(df, use_container_width=True, hide_index=True)
 
 # ----------------------------
 # CALCULATIONS
 # ----------------------------
+total_pressure = sum(pressures.values())
 if total_pressure > 0:
     percentages = {k: (v / total_pressure) * 100 for k, v in pressures.items()}
 else:
@@ -130,10 +202,8 @@ st.metric("Total Pressure (bar)", f"{total_pressure:.2f}")
 # VISUALIZATION
 # ----------------------------
 st.subheader("Jacket Visualization")
-
 html_layout = f"""
 <div style="max-width:360px;margin:auto;font-family:Arial;">
-
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
 
     <div style="display:flex;align-items:center;gap:8px;">
@@ -158,7 +228,6 @@ html_layout = f"""
     {leg_box("AP (D)", percentages["D"], min_targets["D"])}
 
 </div>
-
 <div style="
     margin-top:14px;
     background-color:#34495e;
@@ -168,10 +237,8 @@ html_layout = f"""
     text-align:center;">
     <strong>{jacket_id}</strong>
 </div>
-
 </div>
 """
-
 components.html(html_layout, height=420)
 
 # ----------------------------
@@ -190,29 +257,3 @@ if failed:
     )
 else:
     st.success("✅ All legs meet minimum load distribution requirements.")
-
-# ----------------------------
-# DATA LOGGING
-# ----------------------------
-st.subheader("Data Logging")
-
-col_save, col_view = st.columns(2)
-
-with col_save:
-    if st.button("💾 Save Pressures", use_container_width=True):
-        save_pressures(jacket_id, case, pressures)
-        st.success("Pressures saved successfully.")
-
-with col_view:
-    if st.button("📋 Register", use_container_width=True):
-        st.session_state["show_register"] = True
-
-if st.session_state.get("show_register", False):
-    st.subheader("Pressure Register")
-
-    df = load_register()
-
-    if df.empty:
-        st.info("No records available.")
-    else:
-        st.dataframe(df, use_container_width=True, hide_index=True)
