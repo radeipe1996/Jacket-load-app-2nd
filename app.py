@@ -201,7 +201,7 @@ if st.session_state.get("last_saved_index") is not None:
     df = pd.read_csv(REGISTER_FILE)
     idx = st.session_state["last_saved_index"]
     comment = st.text_input(
-        "Add a comment for this record:",
+        "Add a comment for last record:",
         value=df.at[idx, "Comment"]
     )
     if st.button("💬 Save Comment"):
