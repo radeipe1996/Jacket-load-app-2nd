@@ -209,10 +209,11 @@ if st.session_state.get("last_saved_index") is not None:
         df.to_csv(REGISTER_FILE, index=False)
         st.success("Comment saved!")
 
-# --- VIEW REGISTER BUTTON ---
+# --- VIEW REGISTER BUTTON (TOGGLE) ---
 with col_view:
     if st.button("📋 Register", use_container_width=True):
-        st.session_state["show_register"] = True
+        # Toggle the boolean
+        st.session_state["show_register"] = not st.session_state.get("show_register", False)
 
 # --- DISPLAY REGISTER ---
 if st.session_state.get("show_register", False):
