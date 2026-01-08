@@ -143,8 +143,8 @@ def leg_box(label, value, minimum):
 # ----------------------------
 # HEADER
 # ----------------------------
-st.title("⚖️ Jacket Load Distribution")
-st.caption("Real-time load monitoring during offshore installation")
+st.title("⚖️ Real-time Jacket Load Distribution")
+st.caption("Le Treport OWF - DEME OFFSHORE")
 
 # ----------------------------
 # SELECTION
