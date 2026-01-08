@@ -166,11 +166,9 @@ pressures = {"A": pA, "B": pB, "C": pC, "D": pD}
 st.subheader("Data Logging")
 col_save, col_view = st.columns(2)
 
-# Track last saved record and whether comment input is visible
+# Track last saved record in session state
 if "last_saved_index" not in st.session_state:
     st.session_state["last_saved_index"] = None
-if "show_comment_input" not in st.session_state:
-    st.session_state["show_comment_input"] = False
 
 # --- SAVE PRESSURES BUTTON ---
 with col_save:
@@ -195,30 +193,35 @@ with col_save:
             df = pd.DataFrame([new_row])
 
         df.to_csv(REGISTER_FILE, index=False)
-        st.session_state["last_saved_index"] = len(df) - 1
-        st.session_state["show_comment_input"] = True
+        st.session_state["last_saved_index"] = len(df) - 1  # store index for comment
         st.success("Pressures saved successfully!")
 
 # --- COMMENT INPUT FOR LAST SAVED RECORD ---
-if st.session_state.get("show_comment_input", False):
+if st.session_state.get("last_saved_index") is not None:
     df = pd.read_csv(REGISTER_FILE)
     idx = st.session_state["last_saved_index"]
-
-    # Using st.empty() to allow dynamic removal
-    comment_placeholder = st.empty()
-    comment = comment_placeholder.text_input(
+    comment = st.text_input(
         "Add a comment for this record:",
-        value=df.at[idx, "Comment"],
-        key="comment_input",
-        label_visibility="visible"
+        value=df.at[idx, "Comment"]
     )
-    if st.button("💬 Save Comment", key="save_comment_btn"):
+    if st.button("💬 Save Comment"):
         df.at[idx, "Comment"] = comment
         df.to_csv(REGISTER_FILE, index=False)
         st.success("Comment saved!")
-        # hide comment input after saving
-        st.session_state["show_comment_input"] = False
-        comment_placeholder.empty()
+
+# --- VIEW REGISTER BUTTON ---
+with col_view:
+    if st.button("📋 Register", use_container_width=True):
+        st.session_state["show_register"] = True
+
+# --- DISPLAY REGISTER ---
+if st.session_state.get("show_register", False):
+    st.subheader("Pressure Register")
+    df = pd.read_csv(REGISTER_FILE)
+    if df.empty:
+        st.info("No records available.")
+    else:
+        st.dataframe(df, use_container_width=True, hide_index=True)
 
 # ----------------------------
 # CALCULATIONS
