@@ -95,14 +95,14 @@ LEG_LABELS = {
 from datetime import datetime, timedelta
 
 def save_pressures(jacket_id, case, pressures):
-    # Get current UTC time and add 2 hours for UTC
-    now_utc2 = datetime.utcnow()
+    # Get current UTC time +2 hours
+    now_utc2 = datetime.utcnow() + timedelta(hours=2)
     now_str = now_utc2.strftime("%d/%m/%y %H:%M:%S")  # dd/mm/yy HH:MM:SS
     
     new_row = {
         "Jacket ID": jacket_id,
         "Case": case,
-        "DateTime (UTC)": now_str,
+        "Date Time (UTC)": now_str,  # updated header
         "BP (A)": pressures["A"],
         "BQ (B)": pressures["B"],
         "AQ (C)": pressures["C"],
@@ -116,7 +116,7 @@ def save_pressures(jacket_id, case, pressures):
     else:
         df = pd.DataFrame([new_row])
     df.to_csv(REGISTER_FILE, index=False)
-    return len(df) - 1
+    return len(df) - 1  # return index of last saved record
 
 def load_register():
     if os.path.exists(REGISTER_FILE):
