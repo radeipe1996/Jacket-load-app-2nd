@@ -92,7 +92,7 @@ LEG_LABELS = {
 # ----------------------------
 # FUNCTIONS
 # ----------------------------
-from datetime import datetime, timedelta
+from datetime import datetime, timezone
 
 def save_pressures(jacket_id, case, pressures):
     now = datetime.now().strftime("%d/%m/%y %H:%M:%S")
@@ -180,17 +180,18 @@ if "last_saved_index" not in st.session_state:
 # --- SAVE PRESSURES BUTTON ---
 with col_save:
     if st.button("💾 Save Pressures", use_container_width=True):
-        # Save pressures first
-        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # ✅ TRUE UTC TIME
+        now = datetime.now(timezone.utc).strftime("%d/%m/%y %H:%M:%S")
+
         new_row = {
             "Jacket ID": jacket_id,
             "Case": case,
-            "DateTime": now,
+            "Date Time (UTC)": now,   # ✅ CORRECT HEADER
             "BP (A)": pressures["A"],
             "BQ (B)": pressures["B"],
             "AQ (C)": pressures["C"],
             "AP (D)": pressures["D"],
-            "Comment": ""  # initially empty
+            "Comment": ""
         }
 
         if os.path.exists(REGISTER_FILE):
@@ -200,7 +201,7 @@ with col_save:
             df = pd.DataFrame([new_row])
 
         df.to_csv(REGISTER_FILE, index=False)
-        st.session_state["last_saved_index"] = len(df) - 1  # store index for comment
+        st.session_state["last_saved_index"] = len(df) - 1
         st.success("Pressures saved successfully!")
 
 # --- COMMENT INPUT FOR LAST SAVED RECORD ---
