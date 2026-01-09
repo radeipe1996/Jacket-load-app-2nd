@@ -95,9 +95,9 @@ LEG_LABELS = {
 from datetime import datetime, timedelta
 
 def save_pressures(jacket_id, case, pressures):
-    # Get current UTC time +2 hours
-    now_utc2 = datetime.utcnow() + timedelta(hours=2)
-    now_str = now_utc2.strftime("%d/%m/%y %H:%M:%S")  # dd/mm/yy HH:MM:SS
+    # Get current UTC time
+    now_utc = datetime.utcnow()
+    now_str = now_utc.strftime("%d/%m/%y %H:%M:%S") + " UTC"  # dd/mm/yy HH:MM:SS in UTC
     
     new_row = {
         "Jacket ID": jacket_id,
