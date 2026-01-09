@@ -99,8 +99,8 @@ def save_pressures(jacket_id, case, pressures):
 
     new_row = {
         "Jacket ID": jacket_id,
-        "Casee": case,
-        "Date Time (UTC)": now,   # ✅ ONLY change
+        "Case": case,
+        "Date Time (UTC)": now,
         "BP (A)": pressures["A"],
         "BQ (B)": pressures["B"],
         "AQ (C)": pressures["C"],
@@ -110,11 +110,6 @@ def save_pressures(jacket_id, case, pressures):
 
     if os.path.exists(REGISTER_FILE):
         df = pd.read_csv(REGISTER_FILE)
-
-        # 🔑 FIX: rename old column if it exists
-        if "DateTime" in df.columns:
-            df = df.rename(columns={"DateTime": "Date Time (UTC)"})
-
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
     else:
         df = pd.DataFrame([new_row])
