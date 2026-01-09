@@ -99,7 +99,7 @@ def save_pressures(jacket_id, case, pressures):
 
     new_row = {
         "Jacket ID": jacket_id,
-        "Case": case,
+        "Casee": case,
         "Date Time (UTC)": now,   # ✅ ONLY change
         "BP (A)": pressures["A"],
         "BQ (B)": pressures["B"],
