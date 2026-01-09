@@ -273,8 +273,8 @@ html_layout = f"""
     </div>
 
     {leg_box("BQ (B)", percentages["B"], min_targets["B"])}
-    {leg_box("AQ (C)", percentages["C"], min_targets["C"])}
     {leg_box("AP (D)", percentages["D"], min_targets["D"])}
+    {leg_box("AQ (C)", percentages["C"], min_targets["C"])}
 
 </div>
 <div style="
